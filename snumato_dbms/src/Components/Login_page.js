@@ -11,10 +11,9 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { imgAr } from "./Layout/LoginPage_Images";
 import Chip from "@material-ui/core/Chip";
 
-var img = imgAr.url[Math.floor(Math.random() * imgAr.url.length)];
+
 
 function Copyright() {
   return (
@@ -35,8 +34,8 @@ const useStyles = makeStyles(theme => ({
     height: "100vh"
   },
   image: {
-    // backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundImage: "url(" + img + ")",
+     backgroundImage: 'url(https://source.unsplash.com/user/foodess)',
+    //backgroundImage: "url(" + img + ")",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "dark"
@@ -131,9 +130,9 @@ export default function SignInSide() {
           </form>
           <Box mt={50}>
             <Chip
-              label="Image by Joseph Gonzalez"
+              label="Image by Jennifer Pallian"
               component="a"
-              href="https://unsplash.com/@miracletwentyone?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+              href="https://unsplash.com/@foodess"
               clickable
             />
           </Box>
