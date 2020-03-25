@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import CardRestaurant from "./Card_restaurant";
 import Navbar from "./Layout/Navbar";
 
+
+// TODO : Variable size of cards to be made constant
 class home_page extends Component {
   state = {};
   render() {
