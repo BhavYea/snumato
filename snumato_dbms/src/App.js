@@ -17,9 +17,10 @@ import { makeStyles } from "@material-ui/core/styles";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomePage from "./Components/Home_page";
-import LoginPage from "./Components/Login_page";
+import HomePage from "./Components/Views/Home_page";
+import LoginPage from "./Components/Views/Login_page";
 import Navbar from "./Components/Layout/Navbar";
+import Restaurant from "./Components/Restaurant";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <StandardB /> */}
             <Route path="/" exact component={HomePage} />
             <Route path="/login_page" exact component={LoginPage} />
+            <Route path="/restaurant" exact component={Restaurant} />
           </Switch>
         </Navbar>
       </Router>

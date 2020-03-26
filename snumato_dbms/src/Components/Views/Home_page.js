@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Button, Grid } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
-import CardRestaurant from "./Card_restaurant";
-import Navbar from "./Layout/Navbar";
-
+import CardRestaurant from "../Card_restaurant";
+import Test from "../../Layout/test";
 
 // TODO : Variable size of cards to be made constant
 class home_page extends Component {
@@ -17,6 +16,7 @@ class home_page extends Component {
           color="primary"
           variant="contained"
           component={Link}
+          // className={styles.buttonStyles}
         >
           Button to login page hello
         </Button>
@@ -46,6 +46,7 @@ class home_page extends Component {
             />
           </Grid>
         </Grid>
+        <Test />
       </div>
     );
   }
