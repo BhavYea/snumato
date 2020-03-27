@@ -3,14 +3,13 @@ import { Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 import CardRestaurant from "./Card_restaurant";
-import Navbar from "./Layout/Navbar";
 
-class Restaurant_page extends Component{
-    state={};
-    render(){
-        return(
-            <div>
-                <Grid container justify="space-evenly" direction="row">
+class Restaurant_page extends Component {
+  state = {};
+  render() {
+    return (
+      <div>
+        <Grid container justify="space-evenly" direction="row">
           <Grid item xs={4}>
             <CardRestaurant
               name="ScarDucks"
@@ -35,11 +34,10 @@ class Restaurant_page extends Component{
               description="It's not like I hate it, but I HATE IT"
             />
           </Grid>
-        </Grid> 
-            </div>
-
-        );
-    }
+        </Grid>
+      </div>
+    );
+  }
 }
 
 export default Restaurant_page;

@@ -1,5 +1,15 @@
-.BT{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-    align-items: center !important;
+.BT {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  align-items: center !important;
+}
 
-  }
+.listItem {
+  margin-left: 0;
+  transition: 1s;
+  background-color: blue;
+  color: blue;
+}
+
+.listItem:hover {
+  margin-left: 10px;
+}

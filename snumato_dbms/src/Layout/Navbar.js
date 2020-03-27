@@ -18,13 +18,16 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
-import "../homepage.css";
+import "../Components/homepage.css";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex"
+  },
+  paperColor: {
+    background: "black"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -102,7 +105,7 @@ export default function MiniDrawer(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        style={{opacity:"0.5",background:"black"}}
+        style={{ background: "black" }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open
@@ -120,20 +123,23 @@ export default function MiniDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap style={{opacity:"1",color:"#C34"}}>
+          <Typography
+            variant="h6"
+            noWrap
+            style={{ opacity: "1", color: "#C34" }}
+          >
             SNUMATO
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
-         style={{opacity:"0.5",background:"black"}}
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open
         })}
         classes={{
-          paper: clsx({
+          paper: clsx(classes.paperColor, {
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open
           })
@@ -144,7 +150,7 @@ export default function MiniDrawer(props) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon style={{ color: "white" }} />
             )}
           </IconButton>
         </div>
@@ -152,11 +158,11 @@ export default function MiniDrawer(props) {
         <List>
           {["Today's deals", "Near Me", "Browse"].map((text, index) => (
             <Link to="./" style={{ textDecoration: "none", color: "inherit" }}>
-              <ListItem button key={text}>
-                <ListItemIcon>
+              <ListItem button key={text} className="listItem">
+                <ListItemIcon style={{ color: "white" }}>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} style={{ color: "white" }} />
               </ListItem>
             </Link>
           ))}
@@ -169,10 +175,10 @@ export default function MiniDrawer(props) {
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <ListItem button key={text}>
-                <ListItemIcon>
+                <ListItemIcon style={{ color: "white" }}>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} style={{ color: "white" }} />
               </ListItem>
             </Link>
           ))}
