@@ -18,6 +18,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
+import "../homepage.css";
 
 const drawerWidth = 240;
 
@@ -101,6 +102,7 @@ export default function MiniDrawer(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
+        style={{opacity:"0.5",background:"black"}}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open
@@ -118,12 +120,13 @@ export default function MiniDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap style={{opacity:"1",color:"#C34"}}>
             SNUMATO
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
+         style={{opacity:"0.5",background:"black"}}
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,

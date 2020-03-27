@@ -1,6 +1,5 @@
-Button{
-    color: black;
-    background-color: brown;
-    align-items: center;
+.BT{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    align-items: center !important;
+
   }
-  

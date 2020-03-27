@@ -20,7 +20,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./Components/Views/Home_page";
 import LoginPage from "./Components/Views/Login_page";
 import Navbar from "./Components/Layout/Navbar";
-import Restaurant from "./Components/Restaurant";
+import RestaurantPage from "./Components/Restaurant_page"
 
 function App() {
   return (
@@ -36,7 +36,11 @@ function App() {
             <StandardB /> */}
             <Route path="/" exact component={HomePage} />
             <Route path="/login_page" exact component={LoginPage} />
+<<<<<<< HEAD
             <Route path="/restaurant" exact component={Restaurant} />
+=======
+            <Route path="/Restaurant_page" exact component={RestaurantPage} />
+>>>>>>> 710a3e0870e231f4b9d6c736dac437e8aa6d34a4
           </Switch>
         </Navbar>
       </Router>
