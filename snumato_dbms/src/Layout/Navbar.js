@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   paperColor: {
-    background: "black"
+    background: "black",
+    opacity:"0.7"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -124,9 +125,9 @@ export default function MiniDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
-            style={{ opacity: "1", color: "#C34" }}
+            style={{ opacity: "1", color: "#F05" }}
           >
             SNUMATO
           </Typography>
@@ -150,7 +151,7 @@ export default function MiniDrawer(props) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon style={{ color: "white" }} />
+              <ChevronLeftIcon style={{ color: "#F05" }} />
             )}
           </IconButton>
         </div>

@@ -12,7 +12,7 @@ import {
   ButtonGroup
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
-import Rating from "@material-ui/lab/Rating";
+//import Rating from "@material-ui/lab/Rating";
 import Menu from "./Menu";
 
 const useStyles = makeStyles({
@@ -59,7 +59,7 @@ function Restaurant() {
             <Typography style={{ paddingRight: 10, paddingLeft: 10 }}>
               Rate This Restaurant
             </Typography>
-            <Rating name="pristine" value={null} />
+           
           </Grid>
           {/* {value !== null && (
             <Box ml={2}>{labels[hover !== -1 ? hover : value]}</Box>
