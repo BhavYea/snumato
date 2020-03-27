@@ -1,5 +1,6 @@
 .BT {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; */
+  font-family: 'Liu Jian Mao Cao', cursive !important;
   align-items: center !important;
 }
 
@@ -9,5 +10,10 @@
 }
 
 .listItem:hover {
-  background-color: #CC3344 !important;
+  background-color: #cc3344 !important;
+}
+
+h1 {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  color: white;
 }

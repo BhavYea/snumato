@@ -39,6 +39,8 @@ class home_page extends Component {
         >
           Button to restaurant page
         </Button>
+
+        <h1>Some random text only for testing purposes</h1>
       </div>
     );
   }
