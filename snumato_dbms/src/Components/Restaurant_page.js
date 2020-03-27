@@ -9,29 +9,35 @@ class Restaurant_page extends Component {
   render() {
     return (
       <div>
-        <Grid container justify="space-evenly" direction="row">
-          <Grid item xs={4}>
+        <Grid container justify="space-between">
+          <Grid item>
             <CardRestaurant
               name="ScarDucks"
               description="A place for all the scarred ducks to have refreshing coffe and chat"
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item>
             <CardRestaurant
               name="McRonalds"
               description="It's not like I hate it, but I HATE IT"
             />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item>
             <CardRestaurant
               name="More Restaurants"
               description="Yaay more restaurants"
             />
           </Grid>
-          <Grid itemxs={4}>
+          <Grid item>
             <CardRestaurant
               name="McRonalds"
               description="It's not like I hate it, but I HATE IT"
+            />
+          </Grid>
+          <Grid item>
+            <CardRestaurant
+              name="ScarDucks"
+              description="A place for all the scarred ducks to have refreshing coffe and chat"
             />
           </Grid>
         </Grid>

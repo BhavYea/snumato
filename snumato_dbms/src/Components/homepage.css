@@ -5,11 +5,9 @@
 
 .listItem {
   margin-left: 0;
-  transition: 1s;
-  background-color: blue;
-  color: blue;
+  transition: all 0.4s ease !important;
 }
 
 .listItem:hover {
-  margin-left: 10px;
+  background-color: #CC3344 !important;
 }

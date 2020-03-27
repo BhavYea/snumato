@@ -13,8 +13,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 
-
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -34,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     height: "100vh"
   },
   image: {
-     backgroundImage: 'url(https://source.unsplash.com/user/foodess)',
+    backgroundImage: "url(https://source.unsplash.com/user/foodess)",
     //backgroundImage: "url(" + img + ")",
     backgroundRepeat: "no-repeat",
     backgroundColor:
@@ -134,6 +132,7 @@ export default function SignInSide() {
               component="a"
               href="https://unsplash.com/@foodess"
               clickable
+              style={{ position: "absolute", left: "20vh" }}
             />
           </Box>
         </div>

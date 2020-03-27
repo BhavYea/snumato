@@ -19,8 +19,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomePage from "./Components/Views/Home_page";
 import LoginPage from "./Components/Views/Login_page";
-import Navbar from "./Layout/Navbar"
-import RestaurantPage from "./Components/Restaurant_page"
+import Navbar from "./Layout/Navbar";
+import RestaurantPage from "./Components/Restaurant_page";
+import Restaurant from "./Components/Views/Restaurant";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/" exact component={HomePage} />
             <Route path="/login_page" exact component={LoginPage} />
             <Route path="/Restaurant_page" exact component={RestaurantPage} />
+            <Route path="/Restaurant" exact component={Restaurant} />
           </Switch>
         </Navbar>
       </Router>

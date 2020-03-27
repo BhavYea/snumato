@@ -9,13 +9,14 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
-import Restaurant from "./Restaurant";
+import Restaurant from "./Views/Restaurant";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     minWidth: 345,
-    marginTop: 20
+    marginTop: 20,
+    height: 380
   },
   media: {
     height: 240

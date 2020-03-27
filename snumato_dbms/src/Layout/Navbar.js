@@ -174,7 +174,7 @@ export default function MiniDrawer(props) {
               to="./login_page"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <ListItem button key={text}>
+              <ListItem button key={text} className="listItem">
                 <ListItemIcon style={{ color: "white" }}>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
