@@ -11,7 +11,7 @@ const BTstyle = {
   alignItems: "justify",
   margin: "10px",
   padding: "5px",
-  //fontFamily:"Baloo Da 2"
+  fontFamily:"Baloo Da 2"
 };
 
 // TODO : Variable size of cards to be made constant
@@ -20,6 +20,7 @@ class home_page extends Component {
   render() {
     return (
       <div>
+        <Grid container justify="flex-end" direction="row" alignItems="flex-start">
         <Button
           style={BTstyle}
           to="/login_page"
@@ -30,16 +31,21 @@ class home_page extends Component {
         >
           LOGIN/SIGN UP
         </Button>
+        </Grid>
+        <Grid container justify="center" direction="column" alignItems="stretch">
         <Button
-          style={BTstyle}
+          style={{fontSize:"30px"}}
           className="BT"
           to="/Restaurant_page"
           color="secondary"
           variant="text"
           component={Link}
+          justify="center"
         >
           BROWSE
         </Button>
+        </Grid>
+        
       </div>
     );
   }

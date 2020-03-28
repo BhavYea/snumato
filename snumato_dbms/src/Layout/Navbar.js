@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   paperColor: {
     background: "black",
-    opacity:"0.7"
+    opacity:"0.8"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -127,7 +127,9 @@ export default function MiniDrawer(props) {
           <Typography
             variant="h5"
             noWrap
-            style={{ opacity: "1", color: "#F05" }}
+            style={{ opacity: "1", color: "#F05", textDecoration:"none" }}
+            to="/"
+            component={Link}
           >
             SNUMATO
           </Typography>
@@ -163,7 +165,7 @@ export default function MiniDrawer(props) {
                 <ListItemIcon style={{ color: "white" }}>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} style={{ color: "white" }} />
+                <ListItemText primary={text} style={{ color: "#F05" }} />
               </ListItem>
             </Link>
           ))}

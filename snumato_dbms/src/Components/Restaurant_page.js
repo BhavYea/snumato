@@ -12,26 +12,26 @@ class Restaurant_page extends Component {
         <Grid container justify="space-evenly" direction="row">
           <Grid item xs={4}>
             <CardRestaurant
-              name="ScarDucks"
-              description="A place for all the scarred ducks to have refreshing coffe and chat"
+              name="Naveen Tea House"
+              description="..duh"
             />
           </Grid>
           <Grid item xs={4}>
             <CardRestaurant
-              name="McRonalds"
-              description="It's not like I hate it, but I HATE IT"
+              name="Swad Kathi Roll"
+              description="For times when mess card balance isn't enough"
             />
           </Grid>
           <Grid item xs={4}>
             <CardRestaurant
-              name="More Restaurants"
-              description="Yaay more restaurants"
+              name="Anna's Cafe"
+              description="Andu gondus should have all the fun, period."
             />
           </Grid>
           <Grid itemxs={4}>
             <CardRestaurant
-              name="McRonalds"
-              description="It's not like I hate it, but I HATE IT"
+              name="Surya Tuck Shop"
+              description="My income is from omelettes :3"
             />
           </Grid>
         </Grid>
