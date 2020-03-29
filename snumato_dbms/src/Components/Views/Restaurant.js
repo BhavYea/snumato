@@ -12,7 +12,7 @@ import {
   ButtonGroup
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
-import Rating from "@material-ui/lab/Rating";
+// import Rating from "@material-ui/lab/Rating";
 import Menu from "../Menu";
 
 const useStyles = makeStyles({
