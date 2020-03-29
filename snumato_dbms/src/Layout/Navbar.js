@@ -20,14 +20,15 @@ import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
 import "../Components/homepage.css";
 
-const drawerWidth = 240;
+const drawerWidth = 270;
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex"
   },
   paperColor: {
-    background: "black"
+    background: "black",
+    opacity:"0.8"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -124,9 +125,11 @@ export default function MiniDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
-            style={{ opacity: "1", color: "#C34" }}
+            style={{ opacity: "1", color: "#F05", textDecoration:"none" }}
+            to="/"
+            component={Link}
           >
             SNUMATO
           </Typography>
@@ -150,7 +153,7 @@ export default function MiniDrawer(props) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon style={{ color: "white" }} />
+              <ChevronLeftIcon style={{ color: "#F05" }} />
             )}
           </IconButton>
         </div>
@@ -162,7 +165,7 @@ export default function MiniDrawer(props) {
                 <ListItemIcon style={{ color: "white" }}>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} style={{ color: "white" }} />
+                <ListItemText primary={text} style={{ color: "#F05" }} />
               </ListItem>
             </Link>
           ))}

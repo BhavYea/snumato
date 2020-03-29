@@ -10,6 +10,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import Restaurant from "./Views/Restaurant";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
     height: 380
   },
   media: {
-    height: 240
+    height: 220
   }
 });
 
@@ -29,31 +30,33 @@ export default function Card_restaurant(props) {
 
   return (
     <Link to="/restaurant" style={{ textDecoration: "none" }}>
-      <Card className={classes.root} style={{ background: "#E2E4F6" }}>
+      <Grid item xs={6} direction="row" justify="center" alignItems="center">
+      <Card className={classes.root} style={{ background: "black", opacity:"0.8" }}>
         <CardActionArea>
           <CardContent>
             <CardMedia
               className={classes.media}
               image="https://source.unsplash.com/user/foodess"
-              title="Food Food"
+              title={props.name}
             />
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" style={{color:"#f05"}}>
               {props.name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textPrimary" component="p" style={{color:"#eef"}}>
               {props.description}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="secondary">
             Share
           </Button>
-          <Button size="small" color="primary">
+          <Button size="small" color="secondary">
             Learn More
           </Button>
         </CardActions>
       </Card>
+      </Grid>
     </Link>
   );
 }

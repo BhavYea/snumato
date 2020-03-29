@@ -15,7 +15,7 @@ import Chip from "@material-ui/core/Chip";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" color="secondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
@@ -29,16 +29,14 @@ function Copyright() {
 const useStyles = makeStyles(theme => ({
   spacing: [0, 2, 4, 8],
   root: {
-    height: "100vh"
+    height: "100vh",
   },
   image: {
     backgroundImage: "url(https://source.unsplash.com/user/foodess)",
     //backgroundImage: "url(" + img + ")",
     backgroundRepeat: "no-repeat",
     backgroundColor:
-      theme.palette.type === "dark"
-        ? theme.palette.grey[900]
-        : theme.palette.grey[50],
+    theme.palette.secondary.main,
     backgroundSize: "cover",
     backgroundPosition: "center"
   },
@@ -46,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(8, 4),
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center"  
   },
   avatar: {
     margin: theme.spacing(1),
@@ -55,6 +53,7 @@ const useStyles = makeStyles(theme => ({
   form: {
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(1)
+    
   },
   submit: {
     margin: theme.spacing(3, 0, 2)
@@ -67,10 +66,10 @@ export default function SignInSide() {
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <Grid item xs={false} sm={4} md={7} className={classes.image}/>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}></Avatar>
+          
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
@@ -85,6 +84,7 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               autoFocus
+              color="secondary"
             />
             <TextField
               variant="outlined"
@@ -96,28 +96,29 @@ export default function SignInSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              color="secondary"
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" color="secondary" />}
               label="Remember me"
             />
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              color="primary"
+              color="secondary"
               className={classes.submit}
             >
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" color="secondary">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" color="secondary">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

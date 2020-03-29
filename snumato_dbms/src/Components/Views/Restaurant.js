@@ -59,7 +59,6 @@ function Restaurant() {
             <Typography style={{ paddingRight: 10, paddingLeft: 10 }}>
               Rate This Restaurant
             </Typography>
-            <Rating name="pristine" value={null} />
           </Grid>
           {/* {value !== null && (
             <Box ml={2}>{labels[hover !== -1 ? hover : value]}</Box>

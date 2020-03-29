@@ -7,10 +7,11 @@ import { Button, Grid } from "@material-ui/core";
 
 const BTstyle = {
   opacity: "0.8",
-  background: "#C34",
+  //background: "#C34",
   alignItems: "justify",
   margin: "10px",
-  padding: "5px"
+  padding: "5px",
+  fontFamily:"Baloo Da 2"
 };
 
 // TODO : Variable size of cards to be made constant
@@ -19,28 +20,32 @@ class home_page extends Component {
   render() {
     return (
       <div>
+        <Grid container justify="flex-end" direction="row" alignItems="flex-start">
         <Button
           style={BTstyle}
           to="/login_page"
-          color="primary"
-          variant="contained"
+          color="secondary"
+          variant="text"
           component={Link}
-          // className={styles.buttonStyles}
+          className="BT"
         >
-          Button to login page
+          LOGIN/SIGN UP
         </Button>
+        </Grid>
+        <Grid container justify="center" direction="column" alignItems="stretch">
         <Button
-          style={BTstyle}
+          style={{fontSize:"30px"}}
           className="BT"
           to="/Restaurant_page"
-          color="primary"
-          variant="contained"
+          color="secondary"
+          variant="text"
           component={Link}
+          justify="center"
         >
-          Button to restaurant page
+          BROWSE
         </Button>
-
-        <h1>Some random text only for testing purposes</h1>
+        </Grid>
+        
       </div>
     );
   }
