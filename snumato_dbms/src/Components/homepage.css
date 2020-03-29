@@ -1,6 +1,6 @@
 .BT {
   /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; */
-  font-family: 'Liu Jian Mao Cao', cursive !important;
+  font-family: "Liu Jian Mao Cao", cursive !important;
   align-items: center !important;
 }
 
@@ -14,6 +14,11 @@
 }
 
 h1 {
-  font-family: 'Baloo Da 2', cursive;
+  font-family: "Baloo Da 2", cursive;
   color: white;
+}
+
+.MuiListItemText-primary {
+  font-family: "Baloo Da 2", cursive;
+  font-size: large;
 }

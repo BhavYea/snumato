@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, StylesProvider } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   paperColor: {
     background: "black",
-    opacity:"0.8"
+    opacity: "0.8"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -103,118 +103,120 @@ export default function MiniDrawer(props) {
   };
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        style={{ background: "black" }}
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open
-        })}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open
-            })}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h5"
-            noWrap
-            style={{ opacity: "1", color: "#F05", textDecoration:"none" }}
-            to="/"
-            component={Link}
-          >
-            SNUMATO
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open
-        })}
-        classes={{
-          paper: clsx(classes.paperColor, {
+    <StylesProvider injectFirst>
+      <div className={classes.root}>
+        <CssBaseline />
+        <AppBar
+          style={{ background: "black" }}
+          position="fixed"
+          className={clsx(classes.appBar, {
+            [classes.appBarShift]: open
+          })}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              className={clsx(classes.menuButton, {
+                [classes.hide]: open
+              })}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h5"
+              noWrap
+              style={{ opacity: "1", color: "#F05", textDecoration: "none" }}
+              to="/"
+              component={Link}
+            >
+              SNUMATO
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          variant="permanent"
+          className={clsx(classes.drawer, {
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open
-          })
-        }}
-      >
-        <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon style={{ color: "#F05" }} />
-            )}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          {["Today's deals", "Near Me", "Browse"].map((text, index) => (
-            <Link to="./" style={{ textDecoration: "none", color: "inherit" }}>
-              <ListItem button key={text} className="listItem">
-                <ListItemIcon style={{ color: "white" }}>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} style={{ color: "#F05" }} />
-              </ListItem>
-            </Link>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["Login", "Support", "About us"].map((text, index) => (
-            <Link
-              to="./login_page"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <ListItem button key={text} className="listItem">
-                <ListItemIcon style={{ color: "white" }}>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} style={{ color: "white" }} />
-              </ListItem>
-            </Link>
-          ))}
-        </List>
-      </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {/* <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography> */}
-        {children}
-      </main>
-    </div>
+          })}
+          classes={{
+            paper: clsx(classes.paperColor, {
+              [classes.drawerOpen]: open,
+              [classes.drawerClose]: !open
+            })
+          }}
+        >
+          <div className={classes.toolbar}>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "rtl" ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon style={{ color: "#F05" }} />
+              )}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            {["Today's deals", "Near Me", "Browse"].map((text, index) => (
+              <Link to="./" style={{ textDecoration: "none", color: "inherit" }}>
+                <ListItem button key={text} className="listItem">
+                  <ListItemIcon style={{ color: "white" }}>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} style={{ color: "#F05" }} />
+                </ListItem>
+              </Link>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {["Login", "Support", "About us"].map((text, index) => (
+              <Link
+                to="./login_page"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <ListItem button key={text} className="listItem">
+                  <ListItemIcon style={{ color: "white" }}>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} style={{ color: "white" }} />
+                </ListItem>
+              </Link>
+            ))}
+          </List>
+        </Drawer>
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          {/* <Typography paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
+            facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
+            gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
+            donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
+            adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
+            Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
+            imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
+            arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
+            donec massa sapien faucibus et molestie ac.
+          </Typography>
+          <Typography paragraph>
+            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
+            facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
+            tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
+            consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
+            vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
+            hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
+            tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
+            nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
+            accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+          </Typography> */}
+          {children}
+        </main>
+      </div>
+    </StylesProvider>
   );
 }
 
