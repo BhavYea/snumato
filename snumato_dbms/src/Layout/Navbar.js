@@ -20,7 +20,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
 import "../Components/homepage.css";
 
-const drawerWidth = 240;
+const drawerWidth = 270;
 
 const useStyles = makeStyles(theme => ({
   root: {
