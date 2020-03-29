@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, createMuiTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -18,7 +18,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
-import "../Components/homepage.css";
+import "../resources/CSS/navbar.css";
+import { StylesProvider } from "@material-ui/core";
 
 const drawerWidth = 270;
 
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   paperColor: {
     background: "black",
-    opacity:"0.8"
+    opacity: "0.8"
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -103,7 +104,7 @@ export default function MiniDrawer(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <StylesProvider className={classes.root}>
       <CssBaseline />
       <AppBar
         style={{ background: "black" }}
@@ -127,7 +128,11 @@ export default function MiniDrawer(props) {
           <Typography
             variant="h5"
             noWrap
-            style={{ opacity: "1", color: "#F05", textDecoration:"none" }}
+            style={{
+              opacity: "1",
+              color: "#F05",
+              textDecoration: "none"
+            }}
             to="/"
             component={Link}
           >
@@ -214,7 +219,7 @@ export default function MiniDrawer(props) {
         </Typography> */}
         {children}
       </main>
-    </div>
+    </StylesProvider>
   );
 }
 
