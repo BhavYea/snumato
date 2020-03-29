@@ -45,7 +45,7 @@ class home_page extends Component {
           BROWSE
         </Button>
         </Grid>
-        
+        <h1>Ballo Da 2 testing</h1>
       </div>
     );
   }
