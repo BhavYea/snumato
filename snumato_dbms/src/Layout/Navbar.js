@@ -18,8 +18,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
-import "../Components/homepage.css";
+//import "../Components/homepage.css";
 import { Button, Grid } from "@material-ui/core";
+import "../resources/CSS/navbar.css"
 
 const BTstyle = {
   opacity: "0.8",
@@ -31,7 +32,7 @@ const BTstyle = {
   //fontFamily:"Bree Serif"
   
 };
-import "../resources/CSS/navbar.css"
+
 
 const drawerWidth = 270;
 
@@ -116,60 +117,6 @@ export default function MiniDrawer(props) {
   };
 
   return (
-<<<<<<< HEAD
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        style={{ background: "black" }}
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open
-        })}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open
-            })}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h5"
-            //noWrap
-            style={{ opacity: "1", color: "#F05", textDecoration:"none" }}
-            to="/"
-            component={Link}
-          >
-            SNUMATO
-          </Typography>
-          <Grid container zeroMinWidth justify="flex-end" direction="row" alignItems="flex-start">
-        <Button
-          style={BTstyle}
-          to="/login_page"
-          color="secondary"
-          variant="text"
-          component={Link}
-          className="BT"
-        >
-          LOGIN/SIGN UP
-        </Button>
-        </Grid>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open
-        })}
-        classes={{
-          paper: clsx(classes.paperColor, {
-=======
     <StylesProvider injectFirst>
       <div className={classes.root}>
         <CssBaseline />
@@ -194,19 +141,30 @@ export default function MiniDrawer(props) {
             </IconButton>
             <Typography
               variant="h5"
-              noWrap
+              //noWrap
               style={{ opacity: "1", color: "#F05", textDecoration: "none" }}
               to="/"
               component={Link}
             >
               SNUMATO
             </Typography>
+            <Grid container justify="flex-end" direction="row" alignItems="flex-start">
+        <Button
+          style={BTstyle}
+          to="/login_page"
+          color="secondary"
+          variant="text"
+          component={Link}
+          className="BT"
+        >
+          LOGIN/SIGN UP
+        </Button>
+        </Grid> 
           </Toolbar>
         </AppBar>
         <Drawer
           variant="permanent"
           className={clsx(classes.drawer, {
->>>>>>> f43aafe29c4ea8e557e54f1bd248d91209485037
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open
           })}

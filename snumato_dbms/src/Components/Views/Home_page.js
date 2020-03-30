@@ -20,18 +20,6 @@ class home_page extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        
-        <Grid container justify="center" direction="column" alignItems="stretch">
-        <Button
-          style={{fontSize:"30px"}}
-          className="BT"
-          to="/Restaurant_page"
-          color="secondary"
-          variant="text"
-          component={Link}
-          justify="center"
-=======
         {/* <Grid container justify="flex-end" direction="row" alignItems="flex-start">
         <Button
           style={BTstyle}
@@ -49,7 +37,6 @@ class home_page extends Component {
           justify="space-evenly"
           // direction="column"
           alignItems="stretch"
->>>>>>> f43aafe29c4ea8e557e54f1bd248d91209485037
         >
           <Button
             className="BT"
@@ -61,7 +48,7 @@ class home_page extends Component {
           >
             BROWSE
           </Button>
-          <Button
+          {/*<Button
             to="/login_page"
             color="secondary"
             variant="contained"
@@ -69,7 +56,7 @@ class home_page extends Component {
             className="BT"
           >
             LOGIN/SIGN UP
-          </Button>
+          </Button>*/}
         </Grid>
       </div>
     );
