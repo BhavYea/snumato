@@ -11,8 +11,12 @@ import {
   CardActions,
   ButtonGroup
 } from "@material-ui/core";
-import StarIcon from "@material-ui/icons/Star";
+//import StarIcon from "@material-ui/icons/Star";
+<<<<<<< HEAD
 //import Rating from "@material-ui/lab/Rating";
+=======
+// import Rating from "@material-ui/lab/Rating";
+>>>>>>> f43aafe29c4ea8e557e54f1bd248d91209485037
 import Menu from "../Menu";
 
 const useStyles = makeStyles({

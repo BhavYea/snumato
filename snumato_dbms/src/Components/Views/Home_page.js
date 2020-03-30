@@ -2,9 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import CardRestaurant from "../Card_restaurant";
-import "../homepage.css";
+import "../../resources/CSS/homepage.css"
 import { Button, Grid } from "@material-ui/core";
 
+// const BTstyle = {
+//   opacity: "0.8",
+//   //background: "#C34",
+//   alignItems: "justify",
+//   margin: "10px",
+//   padding: "5px",
+//   fontFamily: "Baloo Da 2"
+// };
 
 // TODO : Variable size of cards to be made constant
 class home_page extends Component {
@@ -12,6 +20,7 @@ class home_page extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         
         <Grid container justify="center" direction="column" alignItems="stretch">
         <Button
@@ -22,9 +31,45 @@ class home_page extends Component {
           variant="text"
           component={Link}
           justify="center"
+=======
+        {/* <Grid container justify="flex-end" direction="row" alignItems="flex-start">
+        <Button
+          style={BTstyle}
+          to="/login_page"
+          color="secondary"
+          variant="text"
+          component={Link}
+          className="BT"
         >
-          BROWSE
+          LOGIN/SIGN UP
         </Button>
+        </Grid> */}
+        <Grid
+          container
+          justify="space-evenly"
+          // direction="column"
+          alignItems="stretch"
+>>>>>>> f43aafe29c4ea8e557e54f1bd248d91209485037
+        >
+          <Button
+            className="BT"
+            to="/Restaurant_page"
+            color="secondary"
+            variant="contained"
+            component={Link}
+            justify="center"
+          >
+            BROWSE
+          </Button>
+          <Button
+            to="/login_page"
+            color="secondary"
+            variant="contained"
+            component={Link}
+            className="BT"
+          >
+            LOGIN/SIGN UP
+          </Button>
         </Grid>
       </div>
     );
