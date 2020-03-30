@@ -36,8 +36,14 @@ class Restaurant_page extends Component {
           </Grid>
           <Grid item>
             <CardRestaurant
-              name="ScarDucks"
-              description="A place for all the scarred ducks to have refreshing coffe and chat"
+              name="Adda Cafe"
+              description="Mai maggi 25 ki deta hu ;_;"
+            />
+          </Grid>
+          <Grid item>
+            <CardRestaurant
+              name="Celeste Cafe"
+              description="Chilli Paneer Samosa ftw"
             />
           </Grid>
         </Grid>

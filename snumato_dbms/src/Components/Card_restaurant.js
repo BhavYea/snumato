@@ -31,7 +31,7 @@ export default function Card_restaurant(props) {
   return (
     <Link to="/restaurant" style={{ textDecoration: "none" }}>
       <Grid item xs={6} direction="row" justify="center" alignItems="center">
-      <Card className={classes.root} style={{ background: "black", opacity:"0.8" }}>
+      <Card className={classes.root} style={{ background: "black", opacity:"0.85" }}>
         <CardActionArea>
           <CardContent>
             <CardMedia

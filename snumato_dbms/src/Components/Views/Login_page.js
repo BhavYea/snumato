@@ -44,7 +44,9 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(8, 4),
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"  
+    alignItems: "center",
+    background: "black",
+    opacity:"0.8"
   },
   avatar: {
     margin: theme.spacing(1),
@@ -52,7 +54,9 @@ const useStyles = makeStyles(theme => ({
   },
   form: {
     width: "100%", // Fix IE 11 issue.
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    background: "black",
+    opacity:"0.8"
     
   },
   submit: {
@@ -67,7 +71,7 @@ export default function SignInSide() {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image}/>
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid style={{background:"black",opacity:"0.9"}}item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5">
@@ -85,6 +89,7 @@ export default function SignInSide() {
               autoComplete="email"
               autoFocus
               color="secondary"
+              style={{color:"#EFF"}}
             />
             <TextField
               variant="outlined"
@@ -106,7 +111,7 @@ export default function SignInSide() {
               type="submit"
               fullWidth
               variant="contained"
-              color="secondary"
+              style={{background:"#F05",opacity:"1"}}
               className={classes.submit}
             >
               Sign In
@@ -133,7 +138,7 @@ export default function SignInSide() {
               component="a"
               href="https://unsplash.com/@foodess"
               clickable
-              style={{ position: "absolute", left: "20vh" }}
+              style={{ position: "absolute", left: "20vh",background:"black",opacity:"0.7",color:"#EFF" }}
             />
           </Box>
         </div>
