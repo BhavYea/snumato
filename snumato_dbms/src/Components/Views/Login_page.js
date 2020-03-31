@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant="body2" color="secondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        SNUMATO
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: "no-repeat",
     backgroundColor:
     theme.palette.secondary.main,
-    backgroundSize: "cover",
+    backgroundSize: "fill",
     backgroundPosition: "center"
   },
   paper: {
@@ -123,7 +123,7 @@ export default function SignInSide() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" color="secondary">
+                <Link href="/signup" variant="body2" color="secondary">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

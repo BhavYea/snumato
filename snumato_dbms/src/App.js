@@ -22,6 +22,8 @@ import LoginPage from "./Components/Views/Login_page";
 import Navbar from "./Layout/Navbar";
 import RestaurantPage from "./Components/Restaurant_page";
 import Restaurant from "./Components/Views/Restaurant";
+import SignUp from "./Components/Views/signup";
+
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
             <Route path="/login_page" exact component={LoginPage} />
             <Route path="/Restaurant_page" exact component={RestaurantPage} />
             <Route path="/Restaurant" exact component={Restaurant} />
+            <Route path="/signup" exact component={SignUp} />
           </Switch>
         </Navbar>
       </Router>
