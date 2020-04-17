@@ -29,12 +29,6 @@ function App() {
       <Router>
         <Navbar>
           <Switch>
-            {/* <Route path="/" exact component={Form} />
-            <Form />
-            <Route path="/standarda" exact component={StandardA} />
-            <Route path="/standardb" exact component={StandardB} />
-            <Route path="/result" exact component={Result} />
-            <StandardB /> */}
             <Route path="/" exact component={HomePage} />
             <Route path="/login_page" exact component={LoginPage} />
             <Route path="/Restaurant_page" exact component={RestaurantPage} />
