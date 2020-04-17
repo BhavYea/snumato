@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant="body2" color="secondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        SNUMATO
+        SNUMATO Changes
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
