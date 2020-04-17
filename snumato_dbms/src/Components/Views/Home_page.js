@@ -48,7 +48,7 @@ class home_page extends Component {
           >
             BROWSE
           </Button>
-          <Button
+          {/*<Button
             to="/login_page"
             color="secondary"
             variant="contained"
@@ -56,9 +56,8 @@ class home_page extends Component {
             className="BT"
           >
             LOGIN/SIGN UP
-          </Button>
+          </Button>*/}
         </Grid>
-        <h1>Ballo Da 2 testing</h1>
       </div>
     );
   }

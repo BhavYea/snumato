@@ -18,7 +18,21 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
+//import "../Components/homepage.css";
+import { Button, Grid } from "@material-ui/core";
 import "../resources/CSS/navbar.css"
+
+const BTstyle = {
+  opacity: "0.8",
+  //background: "#C34",
+  alignItems: "justify",
+  margin: "10px",
+  padding: "5px",
+  fontSize:"16px"
+  //fontFamily:"Bree Serif"
+  
+};
+
 
 const drawerWidth = 270;
 
@@ -127,13 +141,25 @@ export default function MiniDrawer(props) {
             </IconButton>
             <Typography
               variant="h5"
-              noWrap
+              //noWrap
               style={{ opacity: "1", color: "#F05", textDecoration: "none" }}
               to="/"
               component={Link}
             >
               SNUMATO
             </Typography>
+            <Grid container justify="flex-end" direction="row" alignItems="flex-start">
+        <Button
+          style={BTstyle}
+          to="/login_page"
+          color="secondary"
+          variant="text"
+          component={Link}
+          className="BT"
+        >
+          LOGIN/SIGN UP
+        </Button>
+        </Grid> 
           </Toolbar>
         </AppBar>
         <Drawer

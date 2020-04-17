@@ -11,7 +11,7 @@ import {
   CardActions,
   ButtonGroup
 } from "@material-ui/core";
-import StarIcon from "@material-ui/icons/Star";
+//import StarIcon from "@material-ui/icons/Star";
 // import Rating from "@material-ui/lab/Rating";
 import Menu from "../Menu";
 
@@ -31,8 +31,8 @@ const useStyles = makeStyles({
 function Restaurant() {
   const classes = useStyles();
   return (
-    <Grid container>
-      <Card className={classes.resHead}>
+    <Grid container >
+      <Card className={classes.resHead} style={{ background: "black", opacity:"0.85" }}>
         <CardActionArea>
           <CardContent>
             <CardMedia
@@ -45,10 +45,11 @@ function Restaurant() {
               variant="h5"
               component="h2"
               className={classes.resName}
+              style={{color:"#F05"}}
             >
               Restaurant Name
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p" style={{color:"#EFF"}}>
               One Line Short Description, we can decide about keeping or not
               keeping this one
             </Typography>
@@ -56,7 +57,7 @@ function Restaurant() {
         </CardActionArea>
         <CardActions>
           <Grid container alignItems="flex-start">
-            <Typography style={{ paddingRight: 10, paddingLeft: 10 }}>
+            <Typography style={{ paddingRight: 10, paddingLeft: 10,color:"#EFF" }}>
               Rate This Restaurant
             </Typography>
           </Grid>
@@ -72,7 +73,7 @@ function Restaurant() {
             justify="flex-end"
             direction="row"
           >
-            <Button size="small" color="primary">
+            <Button size="small" color="secondary">
               Learn More
             </Button>
           </Grid>
